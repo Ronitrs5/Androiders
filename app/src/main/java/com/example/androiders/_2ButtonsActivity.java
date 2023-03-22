@@ -5,14 +5,13 @@ import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-public class ButtonsActivity extends AppCompatActivity {
+public class _2ButtonsActivity extends AppCompatActivity {
     Button next, back;
 
     ProgressBar p1,p2,p3,p4,p5;
@@ -30,15 +29,9 @@ public class ButtonsActivity extends AppCompatActivity {
         next= findViewById(R.id.BTNnext);
         back= findViewById(R.id.BTNback);
 
-        p1= findViewById(R.id.pb1);
-        p2= findViewById(R.id.pb2);
-        p3= findViewById(R.id.pb3);
-        p4= findViewById(R.id.pb4);
-        p5= findViewById(R.id.pb5);
 
         imageView= findViewById(R.id.img);
         cardView= findViewById(R.id.cardView);
-        textView= findViewById(R.id.txtuseless);
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,7 +45,7 @@ public class ButtonsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                startActivity(new Intent(ButtonsActivity.this, ProgressBarActivity.class));
+                startActivity(new Intent(_2ButtonsActivity.this, _3ProgressBarActivity.class));
 
 
 //                new Handler().postDelayed(new Runnable() {

@@ -7,7 +7,7 @@
     android:paddingStart="@dimen/_20sdp"
     android:paddingEnd="@dimen/_20sdp"
     android:paddingBottom="@dimen/_20sdp"
-    tools:context=".ProgressBarActivity">
+    tools:context="._3ProgressBarActivity">
 
     <ImageView
         android:id="@+id/img2"
@@ -27,32 +27,132 @@
         app:layout_constraintStart_toStartOf="@+id/img2"
         app:layout_constraintTop_toBottomOf="@+id/img2" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/circularbtn"
-        android:layout_width="@dimen/_120sdp"
-        android:layout_height="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conlay1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        android:background="#C3BFBF"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
         android:layout_marginTop="@dimen/_20sdp"
-        android:background="@drawable/button_bk"
-        android:padding="@dimen/_4sdp"
-        android:text="Circular PB"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="@+id/view1"
-        app:layout_constraintStart_toStartOf="@+id/view1"
-        app:layout_constraintTop_toBottomOf="@+id/img2" />
+        app:layout_constraintStart_toStartOf="@id/view1"
+        app:layout_constraintEnd_toEndOf="@id/view1"
+        app:layout_constraintTop_toBottomOf="@id/view1">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/circularbtn"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bk_4"
+            android:padding="@dimen/_4sdp"
+            android:text="Circular PB"
+            android:textSize="@dimen/_11sdp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@id/conlay1"
+            app:layout_constraintStart_toStartOf="@id/conlay1"
+            app:layout_constraintTop_toTopOf="@id/conlay1"/>
+
+        <ProgressBar
+            android:id="@+id/cirpb"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:indeterminateTint="@color/black"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintEnd_toEndOf="@+id/circularbtn"
+            app:layout_constraintStart_toStartOf="@+id/circularbtn"
+            app:layout_constraintTop_toBottomOf="@+id/circularbtn" />
 
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/horizontalbtn"
-        android:layout_width="@dimen/_120sdp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/button_bk"
-        android:padding="@dimen/_4sdp"
-        android:text="Horizontal PB"
-        android:textColor="@color/white"
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conlay2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        android:background="#C3BFBF"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="@id/conlay1"
+        app:layout_constraintStart_toStartOf="@id/conlay1"
+        app:layout_constraintTop_toBottomOf="@id/conlay1"
+        android:layout_marginTop="@dimen/_20sdp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/horizontalbtn"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bk_4"
+            android:padding="@dimen/_4sdp"
+            android:text="Horizontal PB"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintEnd_toEndOf="@id/conlay2"
+            app:layout_constraintStart_toStartOf="@id/conlay2"
+            app:layout_constraintTop_toTopOf="@id/conlay2" />
+
+        <ProgressBar
+            android:id="@+id/horpb"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:indeterminate="false"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:progressDrawable="@drawable/greenprogress"
+            app:layout_constraintStart_toStartOf="@id/horizontalbtn"
+            app:layout_constraintEnd_toEndOf="@id/horizontalbtn"
+            app:layout_constraintTop_toBottomOf="@id/horizontalbtn"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conlay3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        app:circularflow_radiusInDP="4dp"
+        android:background="#C3BFBF"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
         android:layout_marginTop="@dimen/_20sdp"
-        app:layout_constraintEnd_toEndOf="@+id/cirpb"
-        app:layout_constraintStart_toStartOf="@+id/cirpb"
-        app:layout_constraintTop_toBottomOf="@+id/cirpb" />
+        app:layout_constraintEnd_toEndOf="@id/conlay2"
+        app:layout_constraintStart_toStartOf="@id/conlay2"
+        app:layout_constraintTop_toBottomOf="@id/conlay2">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/custombtn"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bk_4"
+            android:padding="@dimen/_4sdp"
+            android:text="Custom PB"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintEnd_toEndOf="@+id/conlay3"
+            app:layout_constraintStart_toStartOf="@id/conlay3"
+            app:layout_constraintTop_toTopOf="@id/conlay3" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/cuspb"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_70sdp"
+            app:lottie_rawRes="@raw/googlepb"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/custombtn"
+            app:layout_constraintStart_toStartOf="@+id/custombtn"
+            app:layout_constraintTop_toBottomOf="@id/custombtn"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/BTNback"
@@ -76,19 +176,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ProgressBars"
-        android:textColor="@color/purple_700"
-        android:textStyle="bold"
-        android:textSize="@dimen/_16sdp"
-        android:maxLines="2"
-        app:layout_constraintBottom_toBottomOf="@+id/BTNback"
-        app:layout_constraintEnd_toStartOf="@+id/BTNnext"
-        app:layout_constraintStart_toEndOf="@+id/BTNback"
-        app:layout_constraintTop_toTopOf="@+id/BTNnext" />
-
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
@@ -99,26 +186,36 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ProgressBar
-        android:id="@+id/cirpb"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_20sdp"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="@+id/circularbtn"
-        app:layout_constraintStart_toStartOf="@+id/circularbtn"
-        app:layout_constraintTop_toBottomOf="@+id/circularbtn" />
 
-    <ProgressBar
-        android:id="@+id/horpb"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_20sdp"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="@+id/horizontalbtn"
-        app:layout_constraintStart_toStartOf="@+id/horizontalbtn"
-        app:layout_constraintTop_toBottomOf="@+id/horizontalbtn" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/xmlbtn"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:background="@drawable/button_bk_3"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:text="xml"
+        android:elevation="10dp"
+        android:textSize="@dimen/_11sdp"
+        android:textStyle="bold"
+        android:textColor="@color/col_dark_blue"
+        app:layout_constraintBottom_toBottomOf="@+id/BTNback"
+        app:layout_constraintStart_toEndOf="@+id/BTNback"
+        app:layout_constraintTop_toTopOf="@+id/BTNback" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/javabtn"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:background="@drawable/button_bk_3"
+        android:text="java"
+        android:textSize="@dimen/_11sdp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/BTNnext"
+        app:layout_constraintEnd_toStartOf="@+id/BTNnext"
+        app:layout_constraintTop_toTopOf="@+id/BTNnext" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

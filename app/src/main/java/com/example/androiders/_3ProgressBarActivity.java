@@ -2,18 +2,25 @@ package com.example.androiders;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 
+import com.airbnb.lottie.LottieAnimationView;
+
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class ProgressBarActivity extends AppCompatActivity {
+public class _3ProgressBarActivity extends AppCompatActivity {
     ProgressBar cpb, hpb;
-    Button cbtn, hbtn;
+    Button cbtn, hbtn, cusbtn;
+    Button i1, i2;
+
+    LottieAnimationView cuspb;
 
     int count=0;
 
@@ -27,6 +34,11 @@ public class ProgressBarActivity extends AppCompatActivity {
         hbtn= findViewById(R.id.horizontalbtn);
         cpb= findViewById(R.id.cirpb);
         hpb= findViewById(R.id.horpb);
+        cuspb= findViewById(R.id.cuspb);
+        cusbtn= findViewById(R.id.custombtn);
+
+        i1= findViewById(R.id.xmlbtn);
+        i2= findViewById(R.id.javabtn);
 
         cbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,6 +50,24 @@ public class ProgressBarActivity extends AppCompatActivity {
                     public void run() {
 
                         cpb.setVisibility(View.INVISIBLE);
+
+                    }
+                },4000);
+
+            }
+        });
+
+        cusbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                cuspb.setVisibility(View.VISIBLE);
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        cuspb.setVisibility(View.INVISIBLE);
+
                     }
                 },4000);
 
@@ -61,14 +91,36 @@ public class ProgressBarActivity extends AppCompatActivity {
                             t.cancel();
                             count=0;
                             hpb.setVisibility(View.INVISIBLE);
+
                         }
+
                     }
                 };
 
                 t.schedule(tt, 0, 40);
             }
+
         });
+
+        i1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoUrl("https://github.com/Ronitrs5/Androiders/blob/master/app/src/main/res/layout/activity_edit_text.xml");
+            }
+        });
+
+        i2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoUrl("https://github.com/Ronitrs5/Androiders/blob/master/app/src/main/java/com/example/androiders/EditTextActivity.java");
+            }
+        });
+
     }
 
+    private void gotoUrl(String s) {
+        Uri uri= Uri.parse(s);
+        startActivity(new Intent(Intent.ACTION_VIEW,uri));
+    }
 
 }

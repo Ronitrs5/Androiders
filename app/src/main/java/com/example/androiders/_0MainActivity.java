@@ -16,7 +16,7 @@ import android.widget.Button;
 import com.example.androiders.drawerActivities.TrainerActivity;
 import com.google.android.material.navigation.NavigationView;
 
-public class MainActivity extends AppCompatActivity {
+public class _0MainActivity extends AppCompatActivity {
 
     DrawerLayout drawerLayout;
     NavigationView navigationView;
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 switch (item.getItemId()){
 
                     case R.id.menu_people:
-                        startActivity(new Intent(MainActivity.this, TrainerActivity.class));
+                        startActivity(new Intent(_0MainActivity.this, TrainerActivity.class));
                         return true;
 
                 }
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, EditTextActivity.class));
+                startActivity(new Intent(_0MainActivity.this, _1EditTextActivity.class));
             }
         });
 

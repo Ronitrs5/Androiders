@@ -5,17 +5,20 @@
       <map>
         <entry key="..\:/My Android Apps/Androiders/app/src/main/res/drawable/button_bk.xml" value="0.2395" />
         <entry key="..\:/My Android Apps/Androiders/app/src/main/res/drawable/button_bk2.xml" value="0.2395" />
+        <entry key="..\:/My Android Apps/Androiders/app/src/main/res/drawable/button_bk_3.xml" value="0.2395" />
+        <entry key="..\:/My Android Apps/Androiders/app/src/main/res/drawable/button_bk_4.xml" value="0.2395" />
         <entry key="..\:/My Android Apps/Androiders/app/src/main/res/drawable/button_bk_back.xml" value="0.2395" />
         <entry key="..\:/My Android Apps/Androiders/app/src/main/res/drawable/button_bk_main.xml" value="0.2395" />
         <entry key="..\:/My Android Apps/Androiders/app/src/main/res/drawable/button_bk_next.xml" value="0.2395" />
         <entry key="..\:/My Android Apps/Androiders/app/src/main/res/drawable/edittext_bk.xml" value="0.2395" />
+        <entry key="..\:/My Android Apps/Androiders/app/src/main/res/drawable/greenprogress.xml" value="0.2395" />
         <entry key="..\:/My Android Apps/Androiders/app/src/main/res/drawable/icon_backarrow.xml" value="0.2395" />
         <entry key="..\:/My Android Apps/Androiders/app/src/main/res/drawable/icon_content.xml" value="0.2395" />
         <entry key="..\:/My Android Apps/Androiders/app/src/main/res/drawable/icon_home.xml" value="0.164" />
         <entry key="..\:/My Android Apps/Androiders/app/src/main/res/drawable/icon_people.xml" value="0.2395" />
         <entry key="..\:/My Android Apps/Androiders/app/src/main/res/drawable/icon_share.xml" value="0.2395" />
         <entry key="..\:/My Android Apps/Androiders/app/src/main/res/layout/activity_buttons.xml" value="0.34479166666666666" />
-        <entry key="..\:/My Android Apps/Androiders/app/src/main/res/layout/activity_edit_text.xml" value="0.34479166666666666" />
+        <entry key="..\:/My Android Apps/Androiders/app/src/main/res/layout/activity_edit_text.xml" value="0.33" />
         <entry key="..\:/My Android Apps/Androiders/app/src/main/res/layout/activity_hello_world.xml" value="0.3307291666666667" />
         <entry key="..\:/My Android Apps/Androiders/app/src/main/res/layout/activity_main.xml" value="0.34479166666666666" />
         <entry key="..\:/My Android Apps/Androiders/app/src/main/res/layout/activity_progress_bar.xml" value="0.34479166666666666" />

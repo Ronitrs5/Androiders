@@ -14,19 +14,19 @@
         android:theme="@style/Theme.Androiders"
         tools:targetApi="31">
         <activity
-            android:name=".ProgressBarActivity"
+            android:name="._3ProgressBarActivity"
             android:exported="false" />
         <activity
-            android:name=".ButtonsActivity"
+            android:name="._2ButtonsActivity"
             android:exported="false" />
         <activity
-            android:name=".EditTextActivity"
+            android:name="._1EditTextActivity"
             android:exported="false" />
         <activity
             android:name=".drawerActivities.TrainerActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name="._0MainActivity"
             android:exported="false" />
         <activity
             android:name=".SplashScreenActivity"
