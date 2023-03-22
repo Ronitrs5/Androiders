@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:title="App">
+            <menu>
+
+                <item android:id="@+id/menu_home"
+                    android:title="Home"
+                    android:icon="@drawable/icon_home"
+                    android:iconTint="@color/col_dark_blue">
+                </item>
+
+                <item android:id="@+id/menu_people"
+                    android:title="Android Trainers"
+                    android:icon="@drawable/icon_people"
+                    android:iconTint="@color/col_dark_blue">
+                </item>
+
+                <item
+                    android:id="@+id/menu_photo"
+                    android:title="Content"
+                    android:icon="@drawable/icon_content">
+
+                </item>
+
+
+            </menu>
+        </item>
+    </group>
+
+
+    <group android:checkableBehavior="single">
+
+        <item android:title="Others">
+
+            <menu>
+
+                <item android:id="@+id/shareApp"
+                    android:title="Share app"
+                    android:icon="@drawable/icon_share">
+
+                </item>
+
+            </menu>
+
+        </item>
+
+    </group>
+
+</menu>

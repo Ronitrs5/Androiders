@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="@dimen/_20sdp"
+    android:paddingEnd="@dimen/_20sdp"
+    android:paddingBottom="@dimen/_20sdp"
+    tools:context=".ProgressBarActivity">
+
+    <ImageView
+        android:id="@+id/img2"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/android_logo" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2sdp"
+        android:background="@android:color/black"
+        app:layout_constraintEnd_toEndOf="@+id/img2"
+        app:layout_constraintStart_toStartOf="@+id/img2"
+        app:layout_constraintTop_toBottomOf="@+id/img2" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/circularbtn"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/button_bk"
+        android:padding="@dimen/_4sdp"
+        android:text="Circular PB"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/view1"
+        app:layout_constraintStart_toStartOf="@+id/view1"
+        app:layout_constraintTop_toBottomOf="@+id/img2" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/horizontalbtn"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_bk"
+        android:padding="@dimen/_4sdp"
+        android:text="Horizontal PB"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:layout_constraintEnd_toEndOf="@+id/cirpb"
+        app:layout_constraintStart_toStartOf="@+id/cirpb"
+        app:layout_constraintTop_toBottomOf="@+id/cirpb" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/BTNback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_bk_back"
+        android:text="Previous"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/BTNnext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_bk_next"
+        android:text="Next"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ProgressBars"
+        android:textColor="@color/purple_700"
+        android:textStyle="bold"
+        android:textSize="@dimen/_16sdp"
+        android:maxLines="2"
+        app:layout_constraintBottom_toBottomOf="@+id/BTNback"
+        app:layout_constraintEnd_toStartOf="@+id/BTNnext"
+        app:layout_constraintStart_toEndOf="@+id/BTNback"
+        app:layout_constraintTop_toTopOf="@+id/BTNnext" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:background="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@+id/BTNback"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/cirpb"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/circularbtn"
+        app:layout_constraintStart_toStartOf="@+id/circularbtn"
+        app:layout_constraintTop_toBottomOf="@+id/circularbtn" />
+
+    <ProgressBar
+        android:id="@+id/horpb"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/horizontalbtn"
+        app:layout_constraintStart_toStartOf="@+id/horizontalbtn"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalbtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
