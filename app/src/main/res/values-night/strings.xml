@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="scrollviewinfo">A view group that allows the view hierarchy placed within it to be scrolled. Scroll view may have only one direct child placed within it. To add multiple views within the scroll view, make the direct child you add a view group, for example LinearLayout, and place additional views within that LinearLayout.</string>
+    <string name="scrollone"><![CDATA[1. A view group that allows the view hierarchy placed within it to be scrolled is called as <b>Scrollview</b>.]]></string>
+    <string name="scrolltwo"><![CDATA[2. Scroll view may have only <b>one</b> direct child placed within it.]]></string>
+    <string name="scrollthree">3. To add multiple views within the scroll view, make the direct child you add a view group, for example LinearLayout, and place additional views within that LinearLayout.</string>
+</resources>

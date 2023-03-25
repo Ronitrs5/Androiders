@@ -47,4 +47,6 @@ dependencies {
     implementation'de.hdodenhof:circleimageview:3.0.0'
 
     //slanted texts
+    implementation 'nl.dionsegijn:konfetti-xml:2.0.0@aar'
+    implementation 'nl.dionsegijn:konfetti-core:2.0.2'
 }

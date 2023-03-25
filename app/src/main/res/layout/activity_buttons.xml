@@ -17,19 +17,28 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/android_logo" />
+    <ImageView
+        android:id="@+id/homeBtn"
+        android:layout_width="@dimen/_22sdp"
+        android:layout_height="@dimen/_22sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icon_home" />
 
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/col_light_blue"
+        android:backgroundTint="#DDDDDD"
         android:elevation="10dp"
         android:padding="@dimen/_20sdp"
-        android:layout_marginTop="@dimen/_20sdp"
-        app:layout_constraintEnd_toEndOf="@id/img"
-        app:layout_constraintStart_toStartOf="@id/img"
-        app:layout_constraintTop_toBottomOf="@id/img">
+        android:layout_marginTop="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_4sdp"
+        app:layout_constraintEnd_toEndOf="@+id/MainEditTextTXT"
+        app:layout_constraintStart_toStartOf="@+id/MainEditTextTXT"
+        app:layout_constraintTop_toBottomOf="@+id/MainEditTextTXT">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -55,10 +64,10 @@
                 android:id="@+id/circularbtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
                 android:background="@drawable/button_bk"
                 android:text="Submit"
                 android:textColor="@color/white"
-                android:layout_marginTop="@dimen/_10sdp"
                 app:layout_constraintEnd_toEndOf="@+id/checkBox4"
                 app:layout_constraintStart_toStartOf="@+id/checkBox4"
                 app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
@@ -67,11 +76,11 @@
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:text="Gender: "
-                android:textStyle="bold"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_18sdp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@+id/textView2"
                 app:layout_constraintStart_toStartOf="@+id/textView2"
                 app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -89,16 +98,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/aldrich"
-                    android:textSize="@dimen/_14sdp"
-                    android:text="MALE" />
+                    android:text="MALE"
+                    android:textSize="@dimen/_14sdp" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_10sdp"
-                    android:textSize="@dimen/_14sdp"
                     android:fontFamily="@font/aldrich"
-                    android:text="FEMALE" />
+                    android:text="FEMALE"
+                    android:textSize="@dimen/_14sdp" />
 
             </RadioGroup>
 
@@ -106,7 +115,7 @@
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_10sdp"
+
                 android:text="Areas of interest"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_18sdp"
@@ -147,8 +156,8 @@
                 android:id="@+id/checkBox3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/_14sdp"
                 android:text="AI / ML"
+                android:textSize="@dimen/_14sdp"
                 app:layout_constraintStart_toStartOf="@+id/checkBox2"
                 app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
 
@@ -162,6 +171,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/button_bk_back"
         android:text="Previous"
+        android:textSize="@dimen/_10sdp"
         android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -175,6 +185,7 @@
         android:background="@drawable/button_bk_next"
         android:text="Next"
         android:textStyle="bold"
+        android:textSize="@dimen/_10sdp"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -217,6 +228,22 @@
         app:layout_constraintBottom_toBottomOf="@+id/BTNnext"
         app:layout_constraintEnd_toStartOf="@+id/BTNnext"
         app:layout_constraintTop_toTopOf="@+id/BTNnext" />
+
+    <TextView
+        android:id="@+id/MainEditTextTXT"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:padding="@dimen/_2sdp"
+        android:text="Buttons"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:background="#3DDC84"
+        android:textSize="@dimen/_10sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/img"
+        app:layout_constraintStart_toStartOf="@+id/img"
+        app:layout_constraintTop_toBottomOf="@+id/img" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

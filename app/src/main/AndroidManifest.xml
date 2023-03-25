@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.androiders">
 
+    <uses-permission android:name="android.permission.VIBRATE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,6 +15,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Androiders"
         tools:targetApi="31">
+        <activity
+            android:name=".drawerActivities.ContentActivity"
+            android:exported="false" />
+        <activity
+            android:name="._7FinalActivity"
+            android:exported="false" />
+        <activity
+            android:name="._6ToastActivity"
+            android:exported="false" />
+        <activity
+            android:name=".QuizActivity"
+            android:exported="false" />
+        <activity
+            android:name="._5ScrollViewActivity"
+            android:exported="false" />
+        <activity
+            android:name="._4LinearLayoutActivity"
+            android:exported="false" />
         <activity
             android:name="._3ProgressBarActivity"
             android:exported="false" />

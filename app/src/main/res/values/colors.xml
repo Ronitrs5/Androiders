@@ -12,4 +12,6 @@
     <color name="col_dark_blue">#001847</color>
     <color name="col_light_blue">#C4DFFF</color>
     <color name="col_hint">#757575</color>
+    <color name="col_back">#DDDDDD</color>
+    <color name="col_android">#3DDC84</color>
 </resources>

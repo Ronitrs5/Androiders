@@ -43,10 +43,10 @@ public class SplashScreenActivity extends AppCompatActivity {
                         textView.setVisibility(View.VISIBLE);
                         textView.setAnimation(txtAn);
                     }
-                },500);
+                },100);
 
             }
-        },1000);
+        },500);
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -54,6 +54,6 @@ public class SplashScreenActivity extends AppCompatActivity {
                 startActivity(new Intent(SplashScreenActivity.this, _0MainActivity.class));
                 finish();
             }
-        },4000);
+        },2500);
     }
 }

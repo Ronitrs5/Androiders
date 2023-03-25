@@ -5,23 +5,35 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Vibrator;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class _1EditTextActivity extends AppCompatActivity {
 
     Button next, back;
     Button i1, i2;
-
+    Button button;
+    Animation up, down;
+    Vibrator vibrator;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_text);
 
-        next= findViewById(R.id.BTNnext);
-        back= findViewById(R.id.BTNback);
+        next=(Button) findViewById(R.id.BTNnext);
+        back= (Button) findViewById(R.id.BTNback);
         i1= findViewById(R.id.xmlbtn);
         i2= findViewById(R.id.javabtn);
+        button= findViewById(R.id.circularbtn);
+        vibrator= (Vibrator) getSystemService(VIBRATOR_SERVICE);
+
+        up= AnimationUtils.loadAnimation(this, R.anim.scale_up);
+        down= AnimationUtils.loadAnimation(this, R.anim.scale_down);
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,6 +41,8 @@ public class _1EditTextActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+
 
         next.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,7 +61,16 @@ public class _1EditTextActivity extends AppCompatActivity {
         i2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                gotoUrl("https://github.com/Ronitrs5/Androiders/blob/master/app/src/main/java/com/example/androiders/EditTextActivity.java");
+                gotoUrl("https://github.com/Ronitrs5/Androiders/blob/master/app/src/main/java/com/example/androiders/_1EditTextActivity.java");
+            }
+        });
+
+        ImageView homebtn= (ImageView) findViewById(R.id.homeBtn);
+        homebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), _0MainActivity.class));
+                finishAffinity();
             }
         });
     }

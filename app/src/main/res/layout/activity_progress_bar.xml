@@ -18,23 +18,49 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/android_logo" />
 
+    <ImageView
+        android:id="@+id/homeBtn"
+        android:layout_width="@dimen/_22sdp"
+        android:layout_height="@dimen/_22sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icon_home" />
+
+    <TextView
+        android:id="@+id/MainEditTextTXT"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="wrap_content"
+        android:background="#3DDC84"
+        android:gravity="center"
+        android:padding="@dimen/_2sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="Progress Bars"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_10sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img2" />
+
     <View
         android:id="@+id/view1"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_2sdp"
+        android:layout_marginTop="@dimen/_10sdp"
         android:background="@android:color/black"
-        app:layout_constraintEnd_toEndOf="@+id/img2"
-        app:layout_constraintStart_toStartOf="@+id/img2"
-        app:layout_constraintTop_toBottomOf="@+id/img2" />
+        app:layout_constraintEnd_toEndOf="@+id/MainEditTextTXT"
+        app:layout_constraintStart_toStartOf="@+id/MainEditTextTXT"
+        app:layout_constraintTop_toBottomOf="@+id/MainEditTextTXT" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/conlay1"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_100sdp"
-        android:background="#C3BFBF"
+        android:background="@color/col_back"
         android:paddingTop="@dimen/_10sdp"
         android:paddingBottom="@dimen/_10sdp"
-        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
         app:layout_constraintStart_toStartOf="@id/view1"
         app:layout_constraintEnd_toEndOf="@id/view1"
         app:layout_constraintTop_toBottomOf="@id/view1">
@@ -72,7 +98,7 @@
         android:id="@+id/conlay2"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_100sdp"
-        android:background="#C3BFBF"
+        android:background="@color/col_back"
         android:paddingTop="@dimen/_10sdp"
         android:paddingStart="@dimen/_10sdp"
         android:paddingEnd="@dimen/_10sdp"
@@ -80,7 +106,7 @@
         app:layout_constraintEnd_toEndOf="@id/conlay1"
         app:layout_constraintStart_toStartOf="@id/conlay1"
         app:layout_constraintTop_toBottomOf="@id/conlay1"
-        android:layout_marginTop="@dimen/_20sdp">
+        android:layout_marginTop="@dimen/_10sdp">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/horizontalbtn"
@@ -117,10 +143,10 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/_100sdp"
         app:circularflow_radiusInDP="4dp"
-        android:background="#C3BFBF"
+        android:background="@color/col_back"
         android:paddingTop="@dimen/_10sdp"
         android:paddingBottom="@dimen/_10sdp"
-        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
         app:layout_constraintEnd_toEndOf="@id/conlay2"
         app:layout_constraintStart_toStartOf="@id/conlay2"
         app:layout_constraintTop_toBottomOf="@id/conlay2">
@@ -160,6 +186,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/button_bk_back"
         android:text="Previous"
+        android:textSize="@dimen/_10sdp"
         android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -172,6 +199,7 @@
         android:background="@drawable/button_bk_next"
         android:text="Next"
         android:textStyle="bold"
+        android:textSize="@dimen/_10sdp"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -180,14 +208,12 @@
         android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_2sdp"
-        android:layout_marginBottom="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
         android:background="@android:color/black"
+        android:layout_marginTop="@dimen/_10sdp"
         app:layout_constraintBottom_toTopOf="@+id/BTNback"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-
-
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/xmlbtn"

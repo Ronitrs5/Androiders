@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 
 import com.airbnb.lottie.LottieAnimationView;
@@ -23,6 +24,7 @@ public class _3ProgressBarActivity extends AppCompatActivity {
     LottieAnimationView cuspb;
 
     int count=0;
+    ImageView imageView;
 
 
     @Override
@@ -36,9 +38,28 @@ public class _3ProgressBarActivity extends AppCompatActivity {
         hpb= findViewById(R.id.horpb);
         cuspb= findViewById(R.id.cuspb);
         cusbtn= findViewById(R.id.custombtn);
+        imageView= findViewById(R.id.img2);
+
+        Button next=(Button) findViewById(R.id.BTNnext);
+        Button back= (Button) findViewById(R.id.BTNback);
 
         i1= findViewById(R.id.xmlbtn);
         i2= findViewById(R.id.javabtn);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                startActivity(new Intent(_3ProgressBarActivity.this, _4LinearLayoutActivity.class));
+
+            }
+        });
 
         cbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -105,14 +126,32 @@ public class _3ProgressBarActivity extends AppCompatActivity {
         i1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                gotoUrl("https://github.com/Ronitrs5/Androiders/blob/master/app/src/main/res/layout/activity_edit_text.xml");
+                gotoUrl("https://github.com/Ronitrs5/Androiders/blob/master/app/src/main/res/layout/activity_progress_bar.xml");
             }
         });
 
         i2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                gotoUrl("https://github.com/Ronitrs5/Androiders/blob/master/app/src/main/java/com/example/androiders/EditTextActivity.java");
+                gotoUrl("https://github.com/Ronitrs5/Androiders/blob/master/app/src/main/java/com/example/androiders/_3ProgressBarActivity.java");
+            }
+        });
+
+        imageView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+
+                imageView.setVisibility(View.GONE);
+                return true;
+            }
+        });
+
+        ImageView homebtn= (ImageView) findViewById(R.id.homeBtn);
+        homebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), _0MainActivity.class));
+                finishAffinity();
             }
         });
 

@@ -4,8 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Vibrator;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -15,6 +20,10 @@ public class _2ButtonsActivity extends AppCompatActivity {
     Button next, back;
 
     ProgressBar p1,p2,p3,p4,p5;
+    Button i1, i2;
+    Button button;
+    Vibrator vibrator;
+    Animation up, down;
 
     ImageView imageView;
     CardView cardView;
@@ -28,6 +37,16 @@ public class _2ButtonsActivity extends AppCompatActivity {
 
         next= findViewById(R.id.BTNnext);
         back= findViewById(R.id.BTNback);
+        button= findViewById(R.id.circularbtn);
+
+        i1= findViewById(R.id.xmlbtn);
+        i2= findViewById(R.id.javabtn);
+
+        vibrator= (Vibrator) getSystemService(VIBRATOR_SERVICE);
+
+        up= AnimationUtils.loadAnimation(this, R.anim.scale_up);
+        down= AnimationUtils.loadAnimation(this, R.anim.scale_down);
+
 
 
         imageView= findViewById(R.id.img);
@@ -47,37 +66,54 @@ public class _2ButtonsActivity extends AppCompatActivity {
 
                 startActivity(new Intent(_2ButtonsActivity.this, _3ProgressBarActivity.class));
 
-
-//                new Handler().postDelayed(new Runnable() {
-//                    @Override
-//                    public void run() {
-//
-//
-//                        p1.setVisibility(View.VISIBLE);
-//                        p2.setVisibility(View.VISIBLE);
-//                        p3.setVisibility(View.VISIBLE);
-//                        p4.setVisibility(View.VISIBLE);
-//                        p5.setVisibility(View.VISIBLE);
-//
-//                        next.setVisibility(View.INVISIBLE);
-//                        back.setVisibility(View.INVISIBLE);
-//                        imageView.setVisibility(View.INVISIBLE);
-//                        textView.setVisibility(View.INVISIBLE);
-//                        cardView.setVisibility(View.INVISIBLE);
-//
-//
-//                        new Handler().postDelayed(new Runnable() {
-//                            @Override
-//                            public void run() {
-//
-//                                finish();
-//
-//                            }
-//                        },5000);
-//
-//                    }
-//                },0);
             }
         });
+
+        i1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoUrl("https://github.com/Ronitrs5/Androiders/blob/master/app/src/main/res/layout/activity_buttons.xml");
+            }
+        });
+
+        i2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoUrl("https://github.com/Ronitrs5/Androiders/blob/master/app/src/main/java/com/example/androiders/_2ButtonsActivity.java");
+            }
+        });
+
+        button.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+
+
+                vibrator.vibrate(5);
+                if (motionEvent.getAction()==MotionEvent.ACTION_UP) {
+                    button.startAnimation(up);
+
+                }
+
+                else if (motionEvent.getAction()==MotionEvent.ACTION_DOWN)
+                    button.startAnimation(down);
+
+
+                return true;
+            }
+        });
+
+        ImageView homebtn= (ImageView) findViewById(R.id.homeBtn);
+        homebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), _0MainActivity.class));
+                finishAffinity();
+            }
+        });
+    }
+
+    private void gotoUrl(String s) {
+        Uri uri= Uri.parse(s);
+        startActivity(new Intent(Intent.ACTION_VIEW,uri));
     }
 }
